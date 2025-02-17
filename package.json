@@ -1,0 +1,31 @@
+{
+  "name": "js-arrays-test",
+  "version": "1.0.0",
+  "description": "JS unit testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run --coverage --globals --reporter verbose",
+    "test:1": "vitest run tests/arrays-01.test.js --globals --reporter verbose",
+    "test:2": "vitest run tests/arrays-02.test.js --globals --reporter verbose",
+    "test:3": "vitest run tests/arrays-03.test.js --globals --reporter verbose",
+    "test:4": "vitest run tests/arrays-04.test.js --globals --reporter verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RVCC-IDMX/js-test-1-template.git"
+  },
+  "author": "Cynthia Teeters cynthia.teeters@raritanval.edu (https://github.com/cynthiateeters)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RVCC-IDMX/js-test-1-template/issues"
+  },
+  "homepage": "https://github.com/RVCC-IDMX/js-test-1-template#readme",
+  "devDependencies": {
+    "@cynthiateeters/check-see-links": "^1.0.0",
+    "@eslint/js": "^9.19.0",
+    "@vitest/coverage-v8": "^3.0.5",
+    "eslint": "^9.19.0",
+    "globals": "^15.14.0",
+    "vitest": "^3.0.5"
+  }
+}
