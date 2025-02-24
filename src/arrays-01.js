@@ -19,7 +19,7 @@
  * @returns {*} The first element.
  */
 function getFirstValue(arr) {
-  // TODO: implement code
+  return arr[0];
 }
 
 /**
@@ -31,7 +31,8 @@ function getFirstValue(arr) {
  * @returns {Array} An array with the four elements.
  */
 function makeArray(a, b, c, d) {
-  // TODO: implement code
+  let Array = [a, b, c, d];
+  return Array;
 }
 
 /**
@@ -39,7 +40,8 @@ function makeArray(a, b, c, d) {
  * @returns {Array<number>} [2, 3, 5, 7, 11]
  */
 function createFirstFivePrimes() {
-  // TODO: implement code
+  let newArray = [2, 3, 5, 7, 11];
+  return newArray;
 }
 
 /**
@@ -48,7 +50,12 @@ function createFirstFivePrimes() {
  * @returns {Array<number>} The new array.
  */
 function createSizedArray(size) {
-  // TODO: implement code
+  let newArray = new Array(size);
+
+  for (let i = 0; i < size; i++) {
+    newArray[i] = i;
+  }
+  return newArray;
   // HINT: Use a for loop and push numbers from 0 to size - 1 into an array.
 }
 
@@ -60,7 +67,10 @@ function createSizedArray(size) {
  * @see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
  */
 function modifyArrayByAdding(arr) {
-  // TODO: implement code
+  let shallowCopy = [...arr];
+  shallowCopy.unshift(1);
+  shallowCopy.push(1);
+  return shallowCopy;
   // HINT: Create a shallow copy and then use unshift() and push().
 }
 
@@ -71,7 +81,10 @@ function modifyArrayByAdding(arr) {
  * @returns {Array} The modified array.
  */
 function modifyArrayByDeleting(arr) {
-  // TODO: implement code
+  let shallowCopy = [...arr];
+  shallowCopy.shift();
+  shallowCopy.pop();
+  return shallowCopy;
   // HINT: Create a shallow copy and use shift() and pop() if the array is not empty.
 }
 
@@ -82,7 +95,7 @@ function modifyArrayByDeleting(arr) {
  * @returns {*} The element at the given index.
  */
 function findElementAtIndex(arr, index) {
-  // TODO: implement code
+  return arr[index];
 }
 
 /**
@@ -93,7 +106,7 @@ function findElementAtIndex(arr, index) {
  * @returns {number} The index or -1 if not found.
  */
 function findElementByValue(arr, value) {
-  // TODO: implement code
+  return arr.indexOf(value);
 }
 
 /**
@@ -105,7 +118,9 @@ function findElementByValue(arr, value) {
  * @returns {Array} The modified array.
  */
 function changeElementAtIndex(arr, index, value) {
-  // TODO: implement code
+  arr[index] = value;
+  return arr;
+
 }
 
 /**
@@ -114,7 +129,11 @@ function changeElementAtIndex(arr, index, value) {
  * @returns {string} The joined string.
  */
 function makeStringFromArray(arr) {
-  // TODO: implement code
+  var result;
+
+  result = arr.join('');
+
+  return result;
 }
 
 /**
@@ -123,7 +142,10 @@ function makeStringFromArray(arr) {
  * @returns {Array} A new array with the same elements.
  */
 function createShallowCopy(arr) {
-  // TODO: implement code
+  let shallowCopy = [...arr];
+
+  return shallowCopy;
+
 }
 
 module.exports = {

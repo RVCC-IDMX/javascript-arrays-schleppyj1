@@ -19,9 +19,18 @@
  * @returns {number} The sum.
  */
 function addUpArrayElements(arr) {
-  // TODO: implement code
+  let sum = 0;
+  let num = [...arr];
+
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+
+  return sum;
   // HINT: Use a loop (for or forEach) to sum the elements.
 }
+
+
 
 /**
  * Returns a new array with each number squared.
@@ -29,7 +38,7 @@ function addUpArrayElements(arr) {
  * @returns {Array<number>} A new array with squared values.
  */
 function makeSquareNumbers(arr) {
-  // TODO: implement code
+  return arr.map(num => num * num);
   // HINT: Use the map() method.
 }
 
@@ -40,7 +49,16 @@ function makeSquareNumbers(arr) {
  * @returns {Array<string>} The filtered array.
  */
 function filterForLargeWords(arr, length) {
-  // TODO: implement code
+  let newArray = new Array();
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].length > length) {
+      newArray.push(arr[i]);
+    }
+
+  }
+
+  return newArray;
 }
 
 /**
@@ -49,7 +67,7 @@ function filterForLargeWords(arr, length) {
  * @returns {number|undefined} The first even number or undefined.
  */
 function findTheFirstEvenNumber(arr) {
-  // TODO: implement code
+  return arr.find(number => number % 2 === 0);
 }
 
 /**
@@ -58,7 +76,9 @@ function findTheFirstEvenNumber(arr) {
  * @returns {Array<string>} The sorted array.
  */
 function sortCaseSensitive(arr) {
-  // TODO: implement code
+  let shallowCopy = [...arr];
+  shallowCopy.sort();
+  return shallowCopy;
   // HINT: Create a shallow copy and then use sort().
 }
 
@@ -69,7 +89,7 @@ function sortCaseSensitive(arr) {
  * @returns {string} The resulting string.
  */
 function makeTheString(arr, separator) {
-  // TODO: implement code
+  return arr.join('-');
 }
 
 /**
@@ -78,7 +98,7 @@ function makeTheString(arr, separator) {
  * @returns {Array} The reversed array.
  */
 function reverseTheArray(arr) {
-  // TODO: implement code
+  return arr.toReversed();
 }
 
 /**
@@ -88,7 +108,9 @@ function reverseTheArray(arr) {
  * @returns {Array} The mirror array.
  */
 function makeMirrorArray(arr) {
-  // TODO: implement code
+  let newArray = arr.slice(0, arr.length - 1).reverse();
+
+  return arr.concat(newArray);
   // HINT: Use slice (exclude the last element), reverse it, then concat.
 }
 
@@ -99,7 +121,7 @@ function makeMirrorArray(arr) {
  * @returns {Array} The resulting array.
  */
 function dropRight(arr, n) {
-  // TODO: implement code
+  return arr.slice(0, -n);
   // HINT: Use slice() to return elements up to arr.length - n.
 }
 
@@ -110,7 +132,7 @@ function dropRight(arr, n) {
  * @returns {Array} The resulting array.
  */
 function dropLeft(arr, n) {
-  // TODO: implement code
+  return arr.slice(n);
   // HINT: Use slice() starting at index n.
 }
 
@@ -121,7 +143,7 @@ function dropLeft(arr, n) {
  * @returns {boolean} True if found, false otherwise.
  */
 function checkArrayForValue(arr, val) {
-  // TODO: implement code
+  return arr.includes(val);
 }
 
 module.exports = {

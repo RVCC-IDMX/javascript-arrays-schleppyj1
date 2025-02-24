@@ -20,7 +20,7 @@
  * @returns {string} The character at that index.
  */
 function findTheCharacterAtIndex(str, indx) {
-  // TODO: implement code
+  return str.charAt(indx);
   // HINT: Use the charAt() method.
 }
 
@@ -32,7 +32,7 @@ function findTheCharacterAtIndex(str, indx) {
  * @returns {string} The sliced string.
  */
 function sliceTheString(str, start, end) {
-  // TODO: implement code
+  return str.slice(start, end);
 }
 
 /**
@@ -42,7 +42,7 @@ function sliceTheString(str, start, end) {
  * @returns {Array} An array of substrings.
  */
 function splitTheString(str, separator) {
-  // TODO: implement code
+  return str.split(',');
 }
 
 /**
@@ -51,7 +51,7 @@ function splitTheString(str, separator) {
  * @returns {string} The uppercase string.
  */
 function makeAllUpperCase(str) {
-  // TODO: implement code
+  return str.toUpperCase();
 }
 
 /**
@@ -60,7 +60,7 @@ function makeAllUpperCase(str) {
  * @returns {string} The lowercase string.
  */
 function makeAllLowerCase(str) {
-  // TODO: implement code
+  return str.toLowerCase();
 }
 
 /**
@@ -69,7 +69,11 @@ function makeAllLowerCase(str) {
  * @returns {string} The word in title case.
  */
 function makeWordTitleCase(word) {
-  // TODO: implement code
+  if (!word) {
+    return '';
+  }
+
+  return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
   // HINT: Capitalize the first letter and lowercase the rest.
 }
 
@@ -81,7 +85,7 @@ function makeWordTitleCase(word) {
  * @returns {string} The modified string.
  */
 function replaceTheString(str, oldStr, newStr) {
-  // TODO: implement code
+  return str.replaceAll(oldStr, newStr);
   // HINT: Try using the split() method, then join.
 }
 
@@ -91,7 +95,9 @@ function replaceTheString(str, oldStr, newStr) {
  * @returns {string} The title-cased sentence.
  */
 function makeSentenceTitleCase(sentence) {
-  // TODO: implement code
+  return sentence.split(' ')
+
+    .map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
   // HINT: Split the sentence into words, transform each word, then join them back.
 }
 
